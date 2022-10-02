@@ -1,0 +1,54 @@
+{
+	"description": "Опис предметної області ПП",
+    "type": "object",
+    "properties": {
+    	"customer": {
+          	"description":"Користувач",
+      		"type": "object",
+      		"properties": { 
+      			"nickname" : {
+                  "description":"Ім'я користувача",
+      			},
+      			"password" : {
+                  "description":"Пароль користувача",
+      			},
+      			"mail" : {
+                  "description":"Пошта користувача",
+      			},
+      			"mental_health" :{
+                  	"description":"Психологічне здоров'я",
+            		"type": "object",
+      				"properties": {
+                 		"psychological_state" : {
+                          "description":"Психологічний стан",
+      			  		},
+                  		"emotional_condition" : {
+                          "description":"Емоційний стан",
+      			  		},
+                 		"date" : {
+                          "description":"Дата",
+      			  		}
+                	},             
+                	"required": ["psychological_state","emotional_condition", "date"]
+      			},
+      			"sleep" : {
+                "description":"Сон",
+              	"type": "object",
+              	"properties": {
+              		"number": {
+                      "description":"Кількість сну",
+      		  		},
+              		"quality": {
+                      "description":"Якість сну",
+      		  		},
+             		"date": {
+                      "description":"Дата",
+      		  		}
+             	 }, 
+             	 "required": ["number","quality", "date"]
+      			}
+      		}, 
+        	"required": ["nickname","password", "mail", "mental_health", "sleep"]
+      	}
+    }
+}
