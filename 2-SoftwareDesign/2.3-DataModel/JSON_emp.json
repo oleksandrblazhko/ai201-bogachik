@@ -1,0 +1,17 @@
+{
+	"customer": {
+    	"nickname":"Egor",
+        "password":"12345678",
+        "mail":"fgdr@gmail.com",
+        "mental_health" :{
+          	"psychological_state": "4",
+        	  "emotional_condition" : "3",
+            "date":"23.04.23"
+        },
+        "sleep" : {
+          	"number": "5",
+            "quality": "3",
+            "date": "23.04.23"
+        }
+    }
+}
