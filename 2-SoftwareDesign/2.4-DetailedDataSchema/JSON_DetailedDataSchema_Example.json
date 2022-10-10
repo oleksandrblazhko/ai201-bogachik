@@ -70,7 +70,8 @@
              		"date": {
                       "description":"Дата",
                           "type": "string",
-                          "format" : "date",      		  		}
+                          "format" : "date",      		  		
+			}
              	 }, 
              	 "required": ["number","quality", "date"]
       			}
