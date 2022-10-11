@@ -1,0 +1,82 @@
+{
+	"description": "Опис предметної області ПП",
+    "type": "object",
+    "properties": {
+    	"customer": {
+          	"description":"Користувач",
+      		"type": "object",
+      		"properties": { 
+      			"nickname" : {
+                  "description":"Ім'я користувача",
+                   "type": "string",
+                   "minLength": 1,
+  	  			   "maxLength": 20,
+                   "pattern": "^[a-z0-9_]+$"
+      			},
+      			"password" : {
+                  "description":"Пароль користувача",
+                   "type": "string",
+                   "minLength": 1,
+  	  			   "maxLength": 10,
+                   "pattern": "^[a-zA-Z0-9_-]+$"
+      			},
+      			"mail" : {
+                  "description":"Пошта користувача",
+                  "type": "string",
+      			  "format" : "email",
+                  "pattern": "^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,}$"
+      			},
+      			"mental_health" :{
+                  	"description":"Психологічне здоров'я",
+            		"type": "object",
+      				"properties": {
+                 		"psychological_state" : {
+                          "description":"Психологічний стан",
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 5
+      			  		},
+                  		"emotional_condition" : {
+                          "description":"Емоційний стан",
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 5    
+      			  		},
+                 		"date" : {
+                          "description":"Дата",
+                          "type": "string",
+                          "format" : "date",
+                            
+      			  		}
+                	},             
+                	"required": ["psychological_state","emotional_condition", "date"]
+      			},
+      			"sleep" : {
+                "description":"Сон",
+              	"type": "object",
+              	"properties": {
+              		"number": {
+                      "description":"Кількість сну",
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 24 
+      		  		},
+              		"quality": {
+                      "description":"Якість сну",
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 5 
+      		  		},
+             		"date": {
+                      "description":"Дата",
+                          "type": "string",
+                          "format" : "date",      		  		
+			}
+             	 }, 
+             	 "required": ["number","quality", "date"]
+      			}
+      		}, 
+        	"required": ["nickname","password", "mail", "mental_health", "sleep"]
+      	}
+    }
+}
