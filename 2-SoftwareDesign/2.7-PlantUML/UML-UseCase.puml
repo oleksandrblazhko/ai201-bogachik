@@ -1,0 +1,17 @@
+@startuml 
+title Usecase for Information system
+left to right direction
+skinparam packageStyle rect
+
+actor Consumer
+actor :Сonsumer-engineer:
+
+rectangle Software {
+  Consumer --> (Useful information about setting the day)
+  :Сonsumer-engineer: --> (Useful information about setting the day) 
+  Consumer --> (User Authorization) 
+  :Сonsumer-engineer: --> (User Authorization) 
+  (Psychological well-being testing) ..> (User Authorization) : <<include>>
+  (Payment of paid subscription) ..> (User Authorization) : <<include>>
+}
+@enduml
