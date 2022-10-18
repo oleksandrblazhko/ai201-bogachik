@@ -4,8 +4,8 @@ title Activity Diagram
 
 start
 
-:User shares location to program; 
-:Program checks user data location;
+:User provides sleep parameters; 
+:Program checks sleep parameters;
 
 if (Is Data Correct?) then (yes)
   :Data is correct!;
