@@ -1,1 +1,18 @@
+@startuml
 
+title Activity Diagram 
+
+start
+
+:User shares location to program; 
+:Program checks user data location;
+
+if (Is Data Correct?) then (yes)
+  :Data is correct!;
+else (no)
+  :Your data is incorrect, check your data!;
+endif
+
+stop
+
+@enduml
