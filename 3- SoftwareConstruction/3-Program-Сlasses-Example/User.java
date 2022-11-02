@@ -8,6 +8,12 @@ public class User {
     private Info information; // інформаційна панель
     private Sleep sleep; // інформація про сон користувача
 
+    public User(String nickname, String password, String mail) {
+        this.nickname = nickname;
+        this.password = password;
+        this.mail = mail;
+    }
+
     public String getNickname() {
         return nickname;
     }
@@ -58,6 +64,16 @@ public class User {
 
     public boolean authorization(String nickname, String password){
         return this.nickname.equals(nickname) && this.password.equals(password);
+    }
+
+    @Override
+    public String toString(){
+        return "User{" +
+                "nickname='" + nickname + '\'' +
+                ", password='" + password + '\'' +
+                ", mail=" + mail + '\'' +
+                ", sleep=" + sleep +
+                "}";
     }
 
 }
